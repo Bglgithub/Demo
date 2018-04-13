@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bgl.event.MainActivity">
+
+    <com.bgl.event.ParentViewGroup
+        android:id="@+id/parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="50dp"
+        android:layout_gravity="center"
+        android:background="#c61010">
+        <com.bgl.event.ChildViewGroup
+            android:id="@+id/child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="50dp"
+            android:layout_gravity="center"
+            android:background="#1372e6">
+            <com.bgl.event.ChildView
+                android:id="@+id/view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="#f1b503"/>
+        </com.bgl.event.ChildViewGroup>
+    </com.bgl.event.ParentViewGroup>
+</FrameLayout>

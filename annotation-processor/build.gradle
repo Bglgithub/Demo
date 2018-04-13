@@ -1,0 +1,39 @@
+import java.lang.reflect.Type
+
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.google.auto:auto-common:0.6'
+    compile 'com.google.auto.service:auto-service:1.0-rc2'
+    compile 'com.squareup:javapoet:1.7.0'
+}
+
+task cleanlib {
+    doLast{
+        println "cleanlib"
+        project.getBuildDir().deleteDir()
+    }
+}
+
+task buildLib {
+
+    doLast {
+        String resPath = project.getBuildDir().getAbsolutePath() + "\\libs\\annotation-processor.jar"
+        String destPath = rootDir.getAbsolutePath() + "\\annotation\\libs\\"
+        File file = new File(destPath + "\\annotation-processor.jar")
+        if (file.exists()) {
+            file.deleteOnExit()
+        }
+        println "resPath: " + resPath
+        println "destPath: " + destPath
+        GFileUtils.copyFile(new File(resPath), file)
+    }
+}
+
+assemble.dependsOn(cleanlib)
+buildLib.dependsOn(assemble)
+
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

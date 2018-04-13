@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bgl.test.ParentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bgl.test.MainActivity">
+    <ImageView
+        android:layout_height="2000px"
+        android:layout_width="2000px"
+        android:layout_gravity="center"
+        android:background="@mipmap/app_enter_ad_default_bg5"
+        />
+    <!--<LinearLayout-->
+        <!--android:id="@+id/layout"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:orientation="vertical">-->
+        <!--<TextView-->
+            <!--android:id="@+id/text"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="hellodfdfdfdfdf"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:gravity="center"/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/img"-->
+            <!--android:layout_width="400dp"-->
+            <!--android:layout_height="200dp"-->
+            <!--android:src="@mipmap/ic_launcher"-->
+            <!--android:layout_gravity="center_horizontal"/>-->
+    <!--</LinearLayout>-->
+</com.bgl.test.ParentFrameLayout>

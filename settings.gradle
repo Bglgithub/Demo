@@ -1,0 +1,6 @@
+include ':app', ':event', ':storage', ':conflictevent', ':multiprocessd', ':annotation', ':annotation-processor'
+
+println "Version: " + gradle.gradleVersion
+
+println "Home: " + gradle.getGradleHomeDir().toString()
+
